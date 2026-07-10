@@ -8,40 +8,7 @@
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Theme Defaults (Light Theme) */
-  --bg-primary: #faf9f6;       /* Warm cream/sand background */
-  --bg-secondary: #ffffff;     /* Pure white for containers */
-  --bg-tertiary: #f2efe9;      /* Sightly darker cream for accents */
-  --text-primary: #1e2229;     /* Deep neutral-charcoal for headings */
-  --text-secondary: #565e6d;   /* Muted gray for body copy */
-  --text-muted: #8e96a3;       /* Extra muted grey for footnotes */
-  
-  /* Accent Colors - Elegant Burnt Copper/Amber */
-  --accent: #b45309;           /* Warm copper */
-  --accent-rgb: 180, 83, 9;
-  --accent-hover: #92400e;
-  --accent-glow: rgba(180, 83, 9, 0.08);
-  
-  /* Borders and Separators */
-  --border-color: #e6e2da;
-  --border-focus: #b45309;
-  
-  /* Card/Overlay Styles */
-  --card-shadow: 0 4px 20px -2px rgba(54, 48, 38, 0.06);
-  --card-hover-shadow: 0 10px 30px -4px rgba(54, 48, 38, 0.12);
-  --glass-bg: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(230, 226, 218, 0.7);
-  
-  /* Layout Spacing */
-  --container-max: 1200px;
-  --header-height: 70px;
-  --border-radius-sm: 6px;
-  --border-radius-md: 12px;
-  --border-radius-lg: 20px;
-}
-
-:root.dark {
-  /* Dark Theme Variables */
+  /* Theme Defaults (Dark Theme Only) */
   --bg-primary: #0e0f11;       /* Very deep charcoal/slate */
   --bg-secondary: #16171b;     /* Card background */
   --bg-tertiary: #1f2127;      /* Section offset color */
@@ -49,21 +16,28 @@
   --text-secondary: #a1a8b6;   /* Cool grey body */
   --text-muted: #6b7280;       /* Darker grey */
   
-  /* Dark Theme Accent */
+  /* Accent Colors - Elegant Amber/Gold */
   --accent: #f59e0b;           /* Amber/Gold */
   --accent-rgb: 245, 158, 11;
   --accent-hover: #d97706;
   --accent-glow: rgba(245, 158, 11, 0.12);
   
-  /* Dark Theme Borders */
+  /* Borders and Separators */
   --border-color: #24262f;
   --border-focus: #f59e0b;
   
-  /* Dark Theme Shadows & Glass */
+  /* Card/Overlay Styles */
   --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
   --card-hover-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.5);
   --glass-bg: rgba(22, 23, 27, 0.85);
   --glass-border: rgba(36, 38, 47, 0.7);
+  
+  /* Layout Spacing */
+  --container-max: 1200px;
+  --header-height: 70px;
+  --border-radius-sm: 6px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
 }
 
 /* ==========================================

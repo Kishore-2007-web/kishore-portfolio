@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
 import { siteConfig } from '../data/siteConfig';
 
 export default function Navbar() {
@@ -95,7 +94,6 @@ export default function Navbar() {
         </nav>
 
         <div className="navbar-actions">
-          <ThemeToggle />
           <button
             className="navbar-mobile-toggle"
             onClick={() => setIsOpen(!isOpen)}
