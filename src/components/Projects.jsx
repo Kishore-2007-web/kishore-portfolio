@@ -20,7 +20,7 @@ export default function Projects() {
     <section id="projects" className="projects-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">04 / Portfolio Work</span>
+          <span className="section-label"></span>
           <h2 className="section-title">Projects</h2>
         </div>
 
@@ -58,7 +58,7 @@ export default function Projects() {
                     <div className="fallback-line"></div>
                   </div>
                 )}
-                
+
                 {/* Hover overlay details button */}
                 <div className="project-hover-overlay">
                   <span className="overlay-view-btn">
@@ -74,7 +74,7 @@ export default function Projects() {
                   {project.title}
                 </h3>
                 <p className="project-card-summary">{project.summary}</p>
-                
+
                 <div className="project-card-tags">
                   {project.tags.map((tag) => (
                     <span key={tag} className="project-card-tag">{tag}</span>
@@ -84,7 +84,7 @@ export default function Projects() {
 
               {/* Action Buttons */}
               <div className="project-card-footer">
-                <button 
+                <button
                   onClick={() => setSelectedProject(project)}
                   className="btn btn-secondary btn-sm card-btn"
                   title="View Specs & Features"
@@ -92,19 +92,19 @@ export default function Projects() {
                   <Eye size={14} /> Details
                 </button>
                 <div className="card-external-links">
-                  <a 
-                    href={project.githubUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="card-icon-link"
                     title="Source Code"
                   >
                     <Github size={16} />
                   </a>
-                  <a 
-                    href={project.demoUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="card-icon-link"
                     title="Live Demo"
                   >

@@ -11,7 +11,7 @@ export default function Hero() {
   useEffect(() => {
     let timer;
     const currentRole = roles[roleIndex];
-    
+
     if (isDeleting) {
       timer = setTimeout(() => {
         setDisplayText(prev => prev.slice(0, -1));
@@ -52,7 +52,7 @@ export default function Hero() {
               {siteConfig.personal.availability}
             </div>
           )}
-          
+
           <h1 className="hero-title-main">
             Hello, I'm <span className="hero-name">{siteConfig.personal.name}</span>
           </h1>
@@ -66,20 +66,20 @@ export default function Hero() {
           </div>
 
           <h2 className="hero-tagline">{siteConfig.personal.tagline}</h2>
-          
+
           <p className="hero-intro">{siteConfig.personal.introParagraph}</p>
-          
+
           <p className="hero-secondary-line">{siteConfig.personal.secondaryHeroLine}</p>
 
           <div className="hero-cta-buttons">
-            <button 
-              onClick={() => handleScrollTo('#projects')} 
+            <button
+              onClick={() => handleScrollTo('#projects')}
               className="btn btn-primary"
             >
               View My Work <ArrowRight size={16} />
             </button>
-            <button 
-              onClick={() => handleScrollTo('#contact')} 
+            <button
+              onClick={() => handleScrollTo('#contact')}
               className="btn btn-secondary"
             >
               Let's Chat <MessageSquare size={16} />
@@ -87,40 +87,50 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column: Visual Mesh Placeholder representing Blender/Coding connection */}
+        {/* Right Column: Visual Mesh or Photo */}
         <div className="hero-visual fade-in-el" style={{ animationDelay: '0.2s' }}>
           <div className="hero-visual-canvas">
-            {/* Geometric wireframe mesh lines representing Blender grid */}
-            <div className="mesh-grid-line mesh-h-1"></div>
-            <div className="mesh-grid-line mesh-h-2"></div>
-            <div className="mesh-grid-line mesh-v-1"></div>
-            <div className="mesh-grid-line mesh-v-2"></div>
-            <div className="mesh-diagonal"></div>
+            {siteConfig.personal.avatarUrl ? (
+              <img
+                src={siteConfig.personal.avatarUrl}
+                alt={siteConfig.personal.name}
+                className="hero-avatar-img"
+              />
+            ) : (
+              <>
+                {/* Geometric wireframe mesh lines representing Blender grid */}
+                <div className="mesh-grid-line mesh-h-1"></div>
+                <div className="mesh-grid-line mesh-h-2"></div>
+                <div className="mesh-grid-line mesh-v-1"></div>
+                <div className="mesh-grid-line mesh-v-2"></div>
+                <div className="mesh-diagonal"></div>
 
-            {/* Glowing nodes representing vertex selections in Blender */}
-            <div className="vertex-node node-1" title="Code Element"></div>
-            <div className="vertex-node node-2" title="3D Asset Vertex"></div>
-            <div className="vertex-node node-3" title="UI Node"></div>
-            <div className="vertex-node node-4" title="State Link"></div>
+                {/* Glowing nodes representing vertex selections in Blender */}
+                <div className="vertex-node node-1" title="Code Element"></div>
+                <div className="vertex-node node-2" title="3D Asset Vertex"></div>
+                <div className="vertex-node node-3" title="UI Node"></div>
+                <div className="vertex-node node-4" title="State Link"></div>
 
-            {/* Content card overlay */}
-            <div className="visual-card-overlay">
-              <div className="visual-card-title">&lt;developer_meta /&gt;</div>
-              <div className="visual-card-code">
-                <code>
-                  const profile = &#123;<br />
-                  &nbsp;&nbsp;origin: "Ambattur, Chennai",<br />
-                  &nbsp;&nbsp;status: "3rd_year_cse",<br />
-                  &nbsp;&nbsp;creative_engine: "Blender_3D"<br />
-                  &#125;;
-                </code>
-              </div>
-            </div>
-            
-            {/* Clear edit overlay banner for user */}
-            <span className="placeholder-banner-note">
-              [ Editable Visual Area ]
-            </span>
+                {/* Content card overlay */}
+                <div className="visual-card-overlay">
+                  <div className="visual-card-title">&lt;developer_meta /&gt;</div>
+                  <div className="visual-card-code">
+                    <code>
+                      const profile = &#123;<br />
+                      &nbsp;&nbsp;origin: "Ambattur, Chennai",<br />
+                      &nbsp;&nbsp;status: "3rd_year_cse",<br />
+                      &nbsp;&nbsp;creative_engine: "Blender_3D"<br />
+                      &#125;;
+                    </code>
+                  </div>
+                </div>
+
+                {/* Clear edit overlay banner for user */}
+                <span className="placeholder-banner-note">
+                  [ Editable Visual Area ]
+                </span>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -325,6 +335,19 @@ export default function Hero() {
           align-items: center;
           box-shadow: var(--card-shadow);
           overflow: hidden;
+        }
+
+        .hero-avatar-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: var(--border-radius-lg);
+          transition: transform 0.3s ease;
+          object-position: center 43%; 
+        }
+
+        .hero-avatar-img:hover {
+          transform: scale(1.03);
         }
 
         @media (max-width: 480px) {

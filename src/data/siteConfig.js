@@ -12,6 +12,7 @@ export const siteConfig = {
       "Full Stack Learner",
       "Blender Artist"
     ],
+    avatarUrl: "/my-img-full.jpeg", // KISHORE: Put your profile image inside the "public" folder (e.g. "/photo.jpg") and configure it here.
     tagline: "Building clean, scalable web interfaces and crafting immersive 3D experiences.",
     introParagraph: "I am a 3rd-year Computer Science Engineering student specializing in modern frontend systems. By combining web development with real-time 3D asset modeling in Blender, I build high-performance web applications that are highly visual and client-focused.",
     secondaryHeroLine: "Actively expanding into full-stack architectures and open to internships, freelance web development projects, and creative collaborations.",

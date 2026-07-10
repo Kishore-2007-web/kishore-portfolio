@@ -12,7 +12,7 @@ export default function Contact() {
   const validate = () => {
     let tempErrors = {};
     if (!formData.name.trim()) tempErrors.name = "Name is required.";
-    
+
     if (!formData.email.trim()) {
       tempErrors.email = "Email is required.";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -42,13 +42,13 @@ export default function Contact() {
     e.preventDefault();
     if (validate()) {
       setIsSubmitting(true);
-      
+
       // Simulate form submission to backend (EmailJS/Formspree/Firebase integration hook)
       setTimeout(() => {
         setIsSubmitting(false);
         setSubmitSuccess(true);
         setFormData({ name: '', email: '', message: '' });
-        
+
         // Reset success state after a few seconds
         setTimeout(() => setSubmitSuccess(false), 5000);
       }, 1500);
@@ -59,7 +59,7 @@ export default function Contact() {
     <section id="contact" className="contact-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">06 / Connect</span>
+          <span className="section-label"></span>
           <h2 className="section-title">Get In Touch</h2>
         </div>
 
@@ -187,8 +187,8 @@ export default function Contact() {
                   1. Choose a service (e.g., https://formspree.io/ or https://www.emailjs.com/)
                   2. Update the "handleSubmit" method above to POST to your service's endpoint or invoke their SDK.
                 */}
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="btn btn-primary form-submit-btn"
                   disabled={isSubmitting}
                 >

@@ -66,7 +66,7 @@ export default function Skills() {
     <section id="skills" className="skills-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">02 / Technical Base</span>
+          <span className="section-label"></span>
           <h2 className="section-title">Skills &amp; Technologies</h2>
         </div>
 
@@ -77,7 +77,7 @@ export default function Skills() {
                 <h3 className="skills-category-title">{group.category}</h3>
                 <p className="skills-category-desc">{group.description}</p>
               </div>
-              
+
               <div className="skills-items-container">
                 {group.skills.map((skill, sIdx) => (
                   <div key={sIdx} className="skill-item-badge">

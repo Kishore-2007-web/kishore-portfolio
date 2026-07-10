@@ -7,7 +7,7 @@ export default function Education() {
     <section id="education" className="education-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">05 / Academics</span>
+          <span className="section-label"></span>
           <h2 className="section-title">Education</h2>
         </div>
 
@@ -34,7 +34,7 @@ export default function Education() {
                     <MapPin size={14} /> {edu.location}
                   </span>
                 </div>
-                
+
                 <ul className="education-bullets">
                   {edu.details.map((detail, dIdx) => (
                     <li key={dIdx} className="education-bullet-item">{detail}</li>

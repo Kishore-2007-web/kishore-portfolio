@@ -7,7 +7,7 @@ export default function Services() {
     <section id="services" className="services-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">03 / Offerings</span>
+          <span className="section-label"></span>
           <h2 className="section-title">Services I Provide</h2>
         </div>
 

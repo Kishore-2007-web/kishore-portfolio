@@ -7,7 +7,7 @@ export default function About() {
     <section id="about" className="about-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">01 / Profile</span>
+          <span className="section-label"></span>
           <h2 className="section-title">About Me</h2>
         </div>
 
@@ -17,9 +17,9 @@ export default function About() {
             <h3 className="about-subtitle">
               Combining Web Architecture with 3D Creative Modeling
             </h3>
-            
+
             <p className="about-paragraph">
-              I am a 3rd-year Computer Science & Engineering student at <strong>Jaya Engineering College</strong>. 
+              I am a 3rd-year Computer Science & Engineering student at <strong>Jaya Engineering College</strong>.
               My journey in tech is driven by a curiosity about how interfaces function and how they look. I focus heavily on frontend development, building clean layouts using standard JavaScript, while expanding my knowledge in full-stack tools.
             </p>
 
